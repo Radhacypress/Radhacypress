@@ -17,3 +17,4 @@ describe('OrangeHRM HOmePage', () =>
         cy.title().should('eq', 'OrangeHRM54');
       });
   });
+  
