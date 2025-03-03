@@ -24,11 +24,11 @@ describe('Illustration of SQL Database Validation Using Cypress', () => {
     })
 
     it('Update an Entry into the table and verify', function () {
-        cy.task('queryDb', `UPDATE Persons SET FirstName = "Romas" WHERE City="Vantaa"`).then((result) => {
+        cy.task('queryDb', `UPDATE Persons SET FirstName = "Hugo" WHERE City="Vantaa"`).then((result) => {
             expect(result.changedRows).to.equal(1)
         })
         cy.task('queryDb', `SELECT FirstName FROM Persons WHERE City="Vantaa"`).then((result) => {
-            expect(result[0].FirstName).to.equal('Romas')
+            expect(result[0].FirstName).to.equal('Hugo')
         })
     })
 
